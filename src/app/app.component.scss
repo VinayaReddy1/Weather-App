@@ -1,0 +1,16 @@
+mat-card{
+    min-width: 90% !important;
+    min-height: 75% !important;
+    margin: 3%;
+}
+
+.weather-form{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+}
+.location{
+    padding-left: 20px;
+    padding-right: 20px;
+}
