@@ -29,11 +29,11 @@
   <div *ngIf="results">
     <h2>Current Weather Conditions</h2>
     <mat-list>
-      <mat-list-item> Temperature: {{results.temperature}}</mat-list-item>
+      <mat-list-item> Temperature: {{results.temperature}} C</mat-list-item>
       <mat-list-item> Conditions: {{getWeatherCode(results.weathercode)}}</mat-list-item>
-      <mat-list-item> Wind Speed: {{results.windspeed}}</mat-list-item>
+      <mat-list-item> Wind Speed: {{results.windspeed}} mph</mat-list-item>
       <mat-list-item> Wind Direction: {{results.winddirection}}</mat-list-item>
-      <mat-list-item> Time: {{results.time}} </mat-list-item>
+      <mat-list-item> Date: {{results.time}} </mat-list-item>
      </mat-list>
   </div>
 </mat-card>

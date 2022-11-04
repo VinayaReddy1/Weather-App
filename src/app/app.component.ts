@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { WeatherService } from './services/weather.service';
 import * as moment from 'moment';
+import 'moment-timezone';
 
 @Component({
   selector: 'app-root',
@@ -68,7 +69,8 @@ export class AppComponent implements OnInit{
     }
     this.weatherService.getWeatherInfo(this.lattitude, this.longitude).subscribe(res => {
       this.results = res.current_weather;
-      this.results.time = moment(this.results.time).format("MM/DD/YYYY");
+      var localDate = moment.utc(this.results.time).toDate();
+      this.results.time = moment(localDate).local().format('MM/DD/YYYY');
     });
   }
 
